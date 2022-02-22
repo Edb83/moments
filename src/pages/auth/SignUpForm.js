@@ -14,6 +14,7 @@ import {
   Container,
   Alert,
 } from "react-bootstrap";
+
 import axios from "axios";
 
 const SignUpForm = () => {
@@ -22,12 +23,10 @@ const SignUpForm = () => {
     password1: "",
     password2: "",
   });
+
   const { username, password1, password2 } = signUpData;
-
   const [errors, setErrors] = useState({});
-
   const history = useHistory();
-
   const handleChange = (event) => {
     setSignUpData({
       ...signUpData,
@@ -120,7 +119,7 @@ const SignUpForm = () => {
                 {message}
               </Alert>
             ))}
-            
+
           </Form>
         </Container>
 
