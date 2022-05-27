@@ -16,6 +16,7 @@ import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
+import NotFound from "./components/NotFound";
 
 
 function App() {
@@ -75,7 +76,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          <Route render={() => <h1>Page not found!</h1>} />
+          <Route render={() => <NotFound />} />
         </Switch>
       </Container>
     </div>
